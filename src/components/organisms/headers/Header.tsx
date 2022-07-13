@@ -12,6 +12,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import AvatarUser from '../../atoms/avatars/AvatarUser'
 import SearchIcon from '@mui/icons-material/Search'
 import { useNavigate } from 'react-router-dom'
+import { useAuth0 } from "@auth0/auth0-react"
 
 type Props = {
     handleExplore: ()=>void
@@ -36,7 +37,10 @@ const useStyles = makeStyles((theme:Theme)=>({
     },
     icon: {
         color: "#042330",
-        alignSelf: "center"
+        alignSelf: "center",
+        "&:hover": {
+            cursor: "pointer"
+        }
     },
     appBar: {
         "&.MuiAppBar-root": {
@@ -45,11 +49,33 @@ const useStyles = makeStyles((theme:Theme)=>({
             padding: "0 17%",
             boxShadow: "none"
         }
+    },
+    accountDropDown: {
+        "&.MuiBox-root": {
+            fontFamily: "Cera Pro",
+            position: "absolute",
+            padding: "8px 0",
+            backgroundColor: "#F1F6F4",
+
+            "& .MuiLink-root": {
+                cursor: "pointer",
+                padding: "10px 22px",
+                textDecoration: "none",
+                fontWeight: "500",
+                fontSize: "18px",
+                lineHeight: "24px",
+                color: "#6D787E",
+                "&:hover": {
+                    color: "#116BE9"
+                }
+            }
+        }
     }
 }))
 
 const Header = (props: Props) => {
     const [explore, setExplore] = useState<boolean>(false)
+    const [accountMenu, setAccountMenu] = useState<boolean>(false)
     const classes = useStyles(explore)
 
     const handleExploreClick = ()=>{
@@ -57,6 +83,8 @@ const Header = (props: Props) => {
         props.handleExplore()
     }
     const navigate = useNavigate()
+
+    const {user, isAuthenticated, isLoading, logout, loginWithRedirect} = useAuth0()
   return (
     <AppBar className={classes.appBar} position={"static"}>
         <Box className={classes.box}>
@@ -72,9 +100,34 @@ const Header = (props: Props) => {
                         <Typography>My Library</Typography>
                     </Link>
                 </Box>
-                <Box className={classes.box}>
-                    <AvatarUser children={"A"}></AvatarUser>
-                    <KeyboardArrowDownIcon className={classes.icon}/>
+                <Box>
+                    {   (!isLoading && isAuthenticated)?
+                    <Box className={classes.box}>
+                        <AvatarUser children={user?.name?.charAt(0)+""}/>
+                        {accountMenu? <KeyboardArrowUpIcon className={classes.icon} onClick={()=>{setAccountMenu((accountMenu)=>!accountMenu)}}/>
+                        : <KeyboardArrowDownIcon className={classes.icon} onClick={()=>{setAccountMenu((accountMenu)=>!accountMenu)}}/>}
+                    </Box>
+                    :<Box className={classes.box}>
+                        <Typography sx={{
+                            marginTop: "2px",
+                            fontWeight: "500",
+                            fontSize: "16px",
+                            lineHeight: '20px',
+                            color: "#03314B"
+                        }}>Account</Typography>
+                        {accountMenu? <KeyboardArrowUpIcon className={classes.icon} onClick={()=>{setAccountMenu((accountMenu)=>!accountMenu)}}/>
+                        : <KeyboardArrowDownIcon className={classes.icon} onClick={()=>{setAccountMenu((accountMenu)=>!accountMenu)}}/>}
+                    </Box>
+                    }
+
+                    { accountMenu &&
+                    <Box className={classes.accountDropDown}>
+                        { (!isLoading && isAuthenticated)?
+                            <Link onClick={() => {logout({ returnTo: window.location.origin })}}>Logout</Link>
+                            :<Link onClick={() => loginWithRedirect()}>Login</Link>
+                        }
+                    </Box>
+                    }
                 </Box>
             </Toolbar>
         </Box>
