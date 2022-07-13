@@ -1,0 +1,201 @@
+{
+  "books": [
+    {
+      "author": "Erica Keswin",
+      "title": "Bring Your Human to Work",
+      "state": "Finished",
+      "image": "/assets/pictures/BringYourHumanToWork.png",
+      "time": "13-minute read",
+      "reads": "1.9k reads",
+      "category": "Featured audio blinks",
+      "id": 1
+    },
+    {
+      "author": "Steve Glaveski",
+      "title": "Employee to Entrepreneur",
+      "state": "added to lib",
+      "image": "/assets/pictures/employeeToEntrepreneurship.png",
+      "time": "15-minute read",
+      "category": "Trending blinks",
+      "id": 2
+    },
+    {
+      "author": "Trey Gowdy",
+      "title": "Doesn’t Hurt to Ask",
+      "state": "Finished",
+      "image": "/assets/pictures/DoesntHurtToAsk.png",
+      "time": "13-minute read",
+      "reads": "1.9k reads",
+      "category": "Featured audio blinks",
+      "id": 3
+    },
+    {
+      "author": "Amanda Little",
+      "title": "The Fate of Food",
+      "state": "added to lib",
+      "image": "/assets/pictures/theFateOfFood.png",
+      "time": "12-minute read",
+      "reads": "1.9k reads",
+      "category": "Trending blinks",
+      "id": 4
+    },
+    {
+      "author": "Ryan Holiday, Stephen Hansel",
+      "title": "Lives of the Stoics",
+      "state": "added to lib",
+      "image": "/assets/pictures/liveOfTheStoics.png",
+      "time": "13-minute read",
+      "category": "Trending blinks",
+      "id": 5
+    },
+    {
+      "author": "Debbie King",
+      "title": "Loving Your Business",
+      "state": "",
+      "image": "/assets/pictures/lovingYourBusiness.png",
+      "time": "13-minute read",
+      "category": "Trending blinks",
+      "id": 6
+    },
+    {
+      "author": "Noreena Hertz",
+      "title": "The Lonely Century",
+      "state": "",
+      "image": "/assets/pictures/theLonelyCentruy.png",
+      "time": "15-minute read",
+      "category": "Just added",
+      "id": 7
+    },
+    {
+      "author": "Giada De Laurentiis",
+      "title": "Eat Better, Feel Better",
+      "state": "",
+      "image": "/assets/pictures/eatBetterFeelBetter.png",
+      "time": "13-minute read",
+      "reads": "1.9k reads",
+      "category": "Just added",
+      "id": 8
+    },
+    {
+      "author": "James Moore",
+      "title": "Dropshipping",
+      "state": "added to lib",
+      "image": "/assets/pictures/dropshipping.png",
+      "time": "12-minute read",
+      "category": "Just added",
+      "id": 9
+    },
+    {
+      "author": "Kathleen Shannon and Emily",
+      "title": "Being Boss",
+      "state": "added to lib",
+      "image": "/assets/pictures/beingBoss.png",
+      "time": "13-minute read",
+      "reads": "1.9k reads",
+      "category": "Trending blinks",
+      "id": 10
+    },
+    {
+      "author": "Jim Collins & Bill Lazier",
+      "title": "Beyond Entrepreneurship",
+      "state": "",
+      "image": "/assets/pictures/beyondEntrepreneurship.png",
+      "time": "13-minute read",
+      "reads": "1.9k reads",
+      "category": "Trending blinks",
+      "id": 11
+    }
+  ],
+  "exploreIcons": [
+    {
+      "link": "Entrepreneurship",
+      "image": "/assets/pictures/icons/Enterpreneurship.png",
+      "id": 1
+    },
+    {
+      "link": "Science",
+      "image": "/assets/pictures/icons/Science.png",
+      "id": 2
+    },
+    {
+      "link": "Economics",
+      "image": "/assets/pictures/icons/Economics.png",
+      "id": 3
+    },
+    {
+      "link": "Corporate Culture",
+      "image": "/assets/pictures/icons/Coporate.png",
+      "id": 4
+    },
+    {
+      "link": "Psychology",
+      "image": "/assets/pictures/icons/Psychology.png",
+      "id": 5
+    },
+    {
+      "link": "Nature & Environment",
+      "image": "/assets/pictures/icons/Nature.png",
+      "id": 6
+    },
+    {
+      "link": "Politics",
+      "image": "/assets/pictures/icons/Politics.png",
+      "id": 7
+    },
+    {
+      "link": "Health & Nutrition",
+      "image": "/assets/pictures/icons/Health.png",
+      "id": 8
+    },
+    {
+      "link": "History",
+      "image": "/assets/pictures/icons/History.png",
+      "id": 9
+    },
+    {
+      "link": "Motivation & Inspiration",
+      "image": "/assets/pictures/icons/Motivation.png",
+      "id": 10
+    },
+    {
+      "link": "Productivity",
+      "image": "/assets/pictures/icons/Productivity.png",
+      "id": 11
+    },
+    {
+      "link": "Career & Success",
+      "image": "/assets/pictures/icons/Career.png",
+      "id": 12
+    },
+    {
+      "link": "Marketing & Sales",
+      "image": "/assets/pictures/icons/Marketing.png",
+      "id": 13
+    },
+    {
+      "link": "Personal Development",
+      "image": "/assets/pictures/icons/PersonalDevelopment.png",
+      "id": 14
+    },
+    {
+      "link": "Communication Skills",
+      "image": "/assets/pictures/icons/Commuication.png",
+      "id": 15
+    },
+    {
+      "link": "Money & Investments",
+      "image": "/assets/pictures/icons/Money.png",
+      "id": 16
+    },
+    {
+      "link": "Sex & Relationship",
+      "image": "/assets/pictures/icons/Sex%26Relationship.png",
+      "id": 17
+    },
+    {
+      "link": "Education",
+      "image": "/assets/pictures/icons/Education.png",
+      "id": 18
+    }
+  ]
+}
