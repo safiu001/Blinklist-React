@@ -35,7 +35,7 @@ const ButtonBook = (props: Props) => {
         "&:hover": {
             backgroundColor: "#00C263"
         }
-    }} onClick={()=>handleClick}>Finished Reading</Button>
+    }} onClick={()=>handleClick()}>Finished Reading</Button>
   )
 }
 

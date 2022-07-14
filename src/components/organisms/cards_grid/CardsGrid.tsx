@@ -2,7 +2,7 @@ import { Grid, Theme } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import React, { useEffect, useState } from 'react'
 import { CardModel } from '../../../model/CardModel'
-import BookCard from '../../molecules/book_card/BookCard'
+import BookCard from '../book_card/BookCard'
 
 type Props = {
     onNavChange?: (card:CardModel)=>void,
@@ -54,7 +54,7 @@ const CardsGrid = (props: Props) => {
     <Grid container className={classes.mainContainer} spacing={3}>
         {data.map((val, index)=>{
             return (
-            <Grid item key={val.id}>
+            <Grid item key={val.id} data-testid={val.id}>
                 <BookCard bookData={val} category={category} onClick={()=>handleCardClick(index)}/>
             </Grid>)
         })}

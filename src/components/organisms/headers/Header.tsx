@@ -92,11 +92,11 @@ const Header = (props: Props) => {
                 <Box className={`${classes.left} ${classes.box}`}>
                     <Logo link={'/assets/pictures/Blinklist.png'}/>
                     <SearchIcon className={classes.icon}/>
-                    <Link sx={{display: "flex", borderBottom: explore?"1px solid #2CE080":"none"}} onClick={handleExploreClick}>
+                    <Link sx={{display: "flex", borderBottom: explore?"1px solid #2CE080":"none"}} onClick={handleExploreClick} data-testid={"explore"}>
                         <Typography>Explore</Typography>
                         {explore? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
                     </Link>
-                    <Link onClick={()=>{navigate("/")}}>
+                    <Link onClick={()=>{navigate("/")}} data-testid={"myLibrary"}>
                         <Typography>My Library</Typography>
                     </Link>
                 </Box>
@@ -116,7 +116,7 @@ const Header = (props: Props) => {
                             color: "#03314B"
                         }}>Account</Typography>
                         {accountMenu? <KeyboardArrowUpIcon className={classes.icon} onClick={()=>{setAccountMenu((accountMenu)=>!accountMenu)}}/>
-                        : <KeyboardArrowDownIcon className={classes.icon} onClick={()=>{setAccountMenu((accountMenu)=>!accountMenu)}}/>}
+                        : <KeyboardArrowDownIcon data-testid={"arrowDown"} className={classes.icon} onClick={()=>{setAccountMenu((accountMenu)=>!accountMenu)}}/>}
                     </Box>
                     }
 

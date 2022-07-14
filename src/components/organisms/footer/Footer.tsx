@@ -27,7 +27,7 @@ const useStyles = makeStyles({
 const Footer = (props: Props) => {
   const classes = useStyles()
   return (
-    <Box className={classes.mainContainer}>
+    <Box className={classes.mainContainer} data-testid={"footer"}>
       <Box className={classes.flexContainer}>
         <FooterLeftContent />
         <FooterNav />

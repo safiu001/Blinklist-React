@@ -14,10 +14,15 @@ import TabsBook from '../components/molecules/tabs/TabsBook'
 import Cover from '../components/atoms/cover_image/Cover'
 import { useStyles } from '../Themes/BookTheme'
 
-type Props = {}
+type Props = {
+  bookData?: CardModel
+}
 
 const Body:FC = (props: Props)=>{
   const [bookData, setBookData] = useState<CardModel>()
+  if(props.bookData !== undefined){
+    setBookData(props.bookData)
+  }
   const classes = useStyles()
   let {id} = useParams()
   if(id === undefined)

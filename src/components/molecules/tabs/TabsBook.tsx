@@ -76,8 +76,8 @@ const TabsBook = (props: Props) => {
         supplemented with cutting-edge insights and case studies pertinent to
         today’s business world.
       </TabPanel>
-      <TabPanel value="two" className={classes.content}>Finished</TabPanel>
-      <TabPanel value="three" className={classes.content}>Finished</TabPanel>
+      <TabPanel value="two" className={classes.content}>Who is it for</TabPanel>
+      <TabPanel value="three" className={classes.content}>About the Author</TabPanel>
     </TabContext>
   );
 }

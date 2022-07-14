@@ -62,7 +62,6 @@ const ExtendedNav:FC = (props: Props) => {
     const handleNavClick = (val:jsonIconType)=>{
         if(val.link === "Entrepreneurship"){
             navigate("/category/Entrepreneurship")
-            console.log("Action")
         }else{
             console.log(val.link)
         }
@@ -96,12 +95,14 @@ const ExtendedNav:FC = (props: Props) => {
                                         filter: "invert(26%) sepia(76%) saturate(4557%) hue-rotate(210deg) brightness(97%) contrast(98%)",
                                         cursor: "pointer"
                                     }
-                                }}>
+                                }} data-testid={val.id}>
                                 <IconImage link={val.image}/>
                                 <Typography sx={{
                                     marginLeft: "10px",
-                                    lineHeight: "24px",
-                                    fontSize: "16px"
+                                    lineHeight: "20px",
+                                    fontSize: "16px",
+                                    fontWeight: "400",
+                                    color: "#6D787E"
                                 }}>{val.link}</Typography>
                             </Box>
                         </Grid>

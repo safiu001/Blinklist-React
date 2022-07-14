@@ -51,9 +51,6 @@ const TabsBlinkList = (props: Props) => {
     const finishContent = props.data.filter((val)=>(val.state==="Finished"))
     setCurr(currentContent)
     setFinish(finishContent)
-    console.log(props.data)
-    console.log(curr)
-    console.log(finish)
   }, [props.data])
 
   const handleChange = (card: CardModel)=>{
