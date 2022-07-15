@@ -1,4 +1,3 @@
-import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import { makeStyles } from '@mui/styles'
 import React from 'react'
@@ -20,7 +19,7 @@ const info = [
     }
 ]
 
-const useStyles = makeStyles((theme)=>({
+const useStyles = makeStyles((_theme)=>({
     heading: {
         "&.MuiGrid-root": {
             fontFamily: "Cera Pro",
@@ -50,26 +49,26 @@ const useStyles = makeStyles((theme)=>({
     }
 }))
 
-const FooterNav = (props: Props) => {
+const FooterNav = (_props: Props) => {
     const classes = useStyles()
   return (
   <Grid container className={classes.mainContainer}>
     <Grid container item className={`${classes.firstChild} ${classes.item}`} direction="column" spacing={2}>
         <Grid item className={classes.heading}>{info[0].title}</Grid>
-        {info[0].data.map((info, index)=>{
-            return <Grid item key={index}>{info}</Grid>
+        {info[0].data.map((text, index)=>{
+            return <Grid item key={index}>{text}</Grid>
         })}
     </Grid>
     <Grid container item direction="column" className={`${classes.item}`} spacing={2}>
         <Grid item className={classes.heading}>{info[1].title}</Grid>
-            {info[1].data.map((info, index)=>{
-                return <Grid item key={index}>{info}</Grid>
+            {info[1].data.map((text, index)=>{
+                return <Grid item key={index}>{text}</Grid>
             })}
     </Grid>
     <Grid container item direction="column" className={`${classes.item}`} spacing={2}>
         <Grid item className={classes.heading}>{info[2].title}</Grid>
-            {info[2].data.map((info, index)=>{
-                return <Grid item key={index}>{info}</Grid>
+            {info[2].data.map((text, index)=>{
+                return <Grid item key={index}>{text}</Grid>
             })}
     </Grid>
   </Grid>

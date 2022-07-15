@@ -1,0 +1,7 @@
+organization=safiu001-1
+projectKey=react-blinklist
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.30262
+dashboardUrl=https://sonarcloud.io/dashboard?id=react-blinklist
+ceTaskId=AYIB0KGyeFj9HSJltOCy
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYIB0KGyeFj9HSJltOCy

@@ -9,7 +9,7 @@ import React, { useState } from 'react'
 
 type Props = {}
 
-const useStyles = makeStyles((theme:Theme)=>({
+const useStyles = makeStyles((_theme:Theme)=>({
     tabs: {
         "& .MuiTab-root": {
           display: "inline-flex",
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme:Theme)=>({
       },
 }))
 
-const TabsBook = (props: Props) => {
+const TabsBook = (_props: Props) => {
     const [value, setValue] = useState("one")
     const classes = useStyles()
   return (
@@ -58,7 +58,7 @@ const TabsBook = (props: Props) => {
         <Tabs
           className={classes.tabs}
           aria-label="secondary tabs example"
-          onChange={(event: React.SyntheticEvent, newValue: string) =>
+          onChange={(_event: React.SyntheticEvent, newValue: string) =>
             setValue(newValue)
           }
           value={value}

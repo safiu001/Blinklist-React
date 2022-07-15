@@ -24,7 +24,7 @@ const useStyles = makeStyles({
   }
 })
 
-const Footer = (props: Props) => {
+const Footer = (_props: Props) => {
   const classes = useStyles()
   return (
     <Box className={classes.mainContainer} data-testid={"footer"}>

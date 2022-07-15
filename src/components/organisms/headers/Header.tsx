@@ -18,7 +18,7 @@ type Props = {
     handleExplore: ()=>void
 }
 
-const useStyles = makeStyles((theme:Theme)=>({
+const useStyles = makeStyles((_theme:Theme)=>({
     box: {
         "&.MuiBox-root": {
             display: "flex",
@@ -79,7 +79,7 @@ const Header = (props: Props) => {
     const classes = useStyles(explore)
 
     const handleExploreClick = ()=>{
-        setExplore((explore)=>!explore)
+        setExplore((prevExplore)=>!prevExplore)
         props.handleExplore()
     }
     const navigate = useNavigate()

@@ -14,13 +14,13 @@ import { useNavigate } from 'react-router-dom'
 
 type Props = {}
 
-interface jsonIconType{
+interface JsonIconType{
     id: number,
     image: string,
     link: string
 }
 
-const useStyles = makeStyles((theme:Theme)=>({
+const useStyles = makeStyles((_theme:Theme)=>({
     tabs: {
         "& .MuiTab-root": {
           textTransform: "none",
@@ -46,12 +46,12 @@ const useStyles = makeStyles((theme:Theme)=>({
     }
 }))
 
-const ExtendedNav:FC = (props: Props) => {
+const ExtendedNav:FC = (_props: Props) => {
     const [value, setValue] = useState("one")
     const classes = useStyles()
     let navigate = useNavigate()
 
-    const [data, setData] = useState<jsonIconType[]>([])
+    const [data, setData] = useState<JsonIconType[]>([])
     useEffect(()=> {
         (async ()=>{
             const response = await axios.get("http://localhost:3000/exploreIcons")
@@ -59,7 +59,7 @@ const ExtendedNav:FC = (props: Props) => {
         })()
     }, [])
 
-    const handleNavClick = (val:jsonIconType)=>{
+    const handleNavClick = (val:JsonIconType)=>{
         if(val.link === "Entrepreneurship"){
             navigate("/category/Entrepreneurship")
         }else{
@@ -74,7 +74,7 @@ const ExtendedNav:FC = (props: Props) => {
                 <Tabs
                 className={classes.tabs}
                 aria-label="secondary tabs example"
-                onChange={(event: React.SyntheticEvent, newValue: string)=>setValue(newValue)}
+                onChange={(_event: React.SyntheticEvent, newValue: string)=>setValue(newValue)}
                 value={value}>
                     <Tab value="one" label="Explore by category"/>
                     <Tab value="two" label="See recently added titles"/>

@@ -13,7 +13,7 @@ type Props = {
   data: CardModel[]
 }
 
-const useStyles = makeStyles((theme:Theme)=>({
+const useStyles = makeStyles((_theme:Theme)=>({
   tabs: {
     color: "green",
     "& .MuiTab-root": {
@@ -75,7 +75,7 @@ const TabsBlinkList = (props: Props) => {
         <Tabs
         className={classes.tabs}
         aria-label="secondary tabs example"
-        onChange={(event: React.SyntheticEvent, newValue: string)=>setValue(newValue)}
+        onChange={(_event: React.SyntheticEvent, newValue: string)=>setValue(newValue)}
         value={value}>
             <Tab value="one" label="Currently Reading"/>
             <Tab value="two" label="Finished"/>

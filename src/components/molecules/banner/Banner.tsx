@@ -38,7 +38,7 @@ const useStyles = makeStyles({
     }
 })
 
-const Banner = (props: Props) => {
+const Banner = (_props: Props) => {
     const classes = useStyles()
   return (
     <Box className={classes.mainContainer}>

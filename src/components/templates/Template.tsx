@@ -11,7 +11,7 @@ type Props = {
   height?: string
 }
 
-const useStyles = makeStyles((theme: Theme)=>({
+const useStyles = makeStyles((_theme: Theme)=>({
   modal: {
     position: "absolute",
     backgroundColor: "rgba(157, 163, 166, 0.45)",
@@ -25,7 +25,7 @@ const Template = (props: Props) => {
   const classes = useStyles()
 
   const handleExplore = ()=>{
-    setExplore((explore)=>!explore)
+    setExplore((prevExplore)=>!prevExplore)
   }
 
   return (

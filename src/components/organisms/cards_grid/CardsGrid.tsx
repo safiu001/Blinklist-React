@@ -11,7 +11,7 @@ type Props = {
     data: CardModel[]
 }
 
-const useStyles = makeStyles((theme: Theme)=>({
+const useStyles = makeStyles((_theme: Theme)=>({
     mainContainer: {
         padding: "25px 17% 100px 17%"
     }

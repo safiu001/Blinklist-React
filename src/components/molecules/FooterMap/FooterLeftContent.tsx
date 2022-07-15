@@ -7,7 +7,7 @@ import Logo from '../../atoms/logo/Logo'
 
 type Props = {}
 
-const useStyles = makeStyles((theme:Theme)=>({
+const useStyles = makeStyles((_theme:Theme)=>({
   box: {
     "&.MuiBox-root": {
       minWidth: "360px"
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme:Theme)=>({
   }
 }))
 
-const FooterLeftContent = (props: Props) => {
+const FooterLeftContent = (_props: Props) => {
   const classes = useStyles()
   return (
     <Box className={classes.box}>
