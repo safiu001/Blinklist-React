@@ -49,6 +49,20 @@ const MockBookCardCategory = ({state}: Props)=>{
 jest.mock("axios")
 
 describe("BookCard", ()=>{
+    describe("BookCardTestWithNullValues", ()=>{
+        it("should not fire call the method", async ()=>{
+            render(
+                <BrowserRouter>
+                    <BookCard bookData={bookData} category={false}/>
+                </BrowserRouter>
+            )
+            const linkElement = screen.getByText(/Read Again/i)
+            fireEvent.click(linkElement)
+            expect(linkElement).toBeInTheDocument()
+        })
+    })
+
+
     describe("BookCardTexts", ()=>{
         test("should render the title", async ()=>{
             render(<MockBookCardHome />)
@@ -93,9 +107,19 @@ describe("BookCard", ()=>{
             const linkElement = screen.getByText(/Read Again/i)
             expect(linkElement).toBeInTheDocument()
         })
+
+        test("should not render the add to library if already added", async ()=>{
+            render(<MockBookCardCategory />)
+            const buttonElement = screen.queryByRole("button", {name: /Add to Library/i})
+            expect(buttonElement).not.toBeInTheDocument()
+        })
     })
 
     describe("BookCardHandleClick", ()=>{
+        afterEach(() => {
+            jest.restoreAllMocks();
+        });
+
         it("should update the API with add Button", async ()=>{
             render(<MockBookCardCategory state={""}/>)
             
@@ -127,6 +151,25 @@ describe("BookCard", ()=>{
             expect(axios.put).toHaveBeenCalledWith(`http://localhost:3000/books/${bookData.id}`, {
                 ...bookData, state: "added to lib"
             });
+        })
+
+
+        it("should navigate to the Book Screen when clicked on card", async ()=>{
+            render(<MockBookCardCategory state={""}/>)
+
+            const buttonElement = screen.getByRole("button", {name: /Erica Keswin/i})
+            fireEvent.click(buttonElement)
+
+            expect(document.location.href).toBe(`http://localhost/books/${bookData.id}`)
+        })
+
+        it("should not navigate to the Book Screen when clicked on card at Home", async ()=>{
+            render(<MockBookCardHome state={""}/>)
+
+            const buttonElement = screen.getByRole("button", {name: /Erica Keswin/i})
+            fireEvent.click(buttonElement)
+
+            expect(buttonElement).toBeInTheDocument()
         })
     })
 })

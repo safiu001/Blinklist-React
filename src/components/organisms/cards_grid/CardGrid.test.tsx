@@ -29,4 +29,14 @@ describe("CardGrid", ()=>{
         const gridElement = screen.getByTestId(booksData[0].id)
         expect(gridElement).toBeInTheDocument()
     })
+
+    it("should change the state when props is changed", ()=>{
+        render(
+            <BrowserRouter>
+                <CardsGrid data={booksData} category={true}/>
+            </BrowserRouter>
+        )
+        const gridElement = screen.getByText(booksData[0].title)
+        expect(gridElement).toBeInTheDocument()
+    })
 })

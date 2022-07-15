@@ -1,7 +1,8 @@
-import { render, screen } from "@testing-library/react"
+import { fireEvent, render, screen } from "@testing-library/react"
 import { BrowserRouter } from "react-router-dom"
 import TabsBlinkList from "./TabsBlinkList"
 
+jest.mock("axios")
 const booksData = [
     {
         author: "Erica Keswin",
@@ -32,13 +33,17 @@ describe("TabsBlinkList", ()=>{
 
     it("should render the Tab panel one", async ()=>{
         render(<MockTabsBlinkList />)
+        const tabOne = screen.getByRole("tab", {name: "Currently Reading"})
+        fireEvent.click(tabOne)
         const tabPanelOne = screen.getByRole("tabpanel")
         expect(tabPanelOne).toBeInTheDocument()
     })
     
     it("should render the Tab panel two", async ()=>{
         render(<MockTabsBlinkList />)
-        const tabPanelOne = screen.getByRole("tabpanel")
-        expect(tabPanelOne).toBeInTheDocument()
+        const tabTwo = screen.getByRole("tab", {name: "Finished"})
+        fireEvent.click(tabTwo)
+        const tabPanelTwo = screen.getByRole("tabpanel")
+        expect(tabPanelTwo).toBeInTheDocument()
     })
 })

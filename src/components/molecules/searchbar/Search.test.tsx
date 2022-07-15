@@ -16,4 +16,11 @@ describe("SearchBar", ()=>{
         fireEvent.change(inputElement, {target: {value: "Hello"}})
         expect(inputElement.value).toBe("Hello")
     })
+
+    it('should not fire an event if props is not passed', async () => {
+        render(<SearchBar/>)
+        const inputElement = screen.getByPlaceholderText("Search by title or author") as HTMLInputElement
+        fireEvent.change(inputElement, {target: {value: "Hello"}})
+        expect(inputElement.value).toBe("Hello")
+    })
 })

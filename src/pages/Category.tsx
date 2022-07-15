@@ -4,7 +4,6 @@ import { makeStyles } from '@mui/styles'
 import Box from '@mui/system/Box'
 import axios from 'axios'
 import React, { FC, useEffect, useState } from 'react'
-import {useParams} from 'react-router'
 import Banner from '../components/molecules/banner/Banner'
 import SearchBar from '../components/molecules/searchbar/SearchBar'
 import CardsGrid from '../components/organisms/cards_grid/CardsGrid'
@@ -14,7 +13,7 @@ import { CardModel } from '../model/CardModel'
 type Props = {
 }
 
-const useStyles = makeStyles((theme: Theme)=>({
+const useStyles = makeStyles((_theme: Theme)=>({
   headings: {
     color: "#03314B",
     "&.MuiTypography-root": {
@@ -112,8 +111,7 @@ const Body:FC = ()=>{
   )
 }
 
-const Category = (props: Props) => {
-    const {name} = useParams()
+const Category = (_props: Props) => {
   return (
     <Template>
       <Body />

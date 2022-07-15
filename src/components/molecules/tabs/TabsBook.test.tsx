@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react"
+import { fireEvent, render, screen } from "@testing-library/react"
 import TabsBook from "./TabsBook"
 
 
@@ -25,5 +25,13 @@ describe("TabsBook", ()=>{
         render(<TabsBook />)
         const tabElements = screen.getByRole("tabpanel")
         expect(tabElements).toBeInTheDocument()
+    })
+
+    it("should able to change the value of the tabs", async ()=>{
+        render(<TabsBook />)
+        const selectedTab = screen.getByRole("tab", {name: /Who is it for/i})
+        fireEvent.click(selectedTab)
+        const tabElements = screen.getByRole("tabpanel")
+        expect(tabElements.textContent).toBe("Who is it for")
     })
 })
