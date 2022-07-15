@@ -5,7 +5,7 @@ import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
-import React from 'react'
+import React, { FC } from 'react'
 import Cover from '../../atoms/cover_image/Cover'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined'
@@ -51,6 +51,59 @@ const BookCard = (props: Props) => {
   const handleCardClick = ()=>{
     if(props.category){
       navigate(`/books/${props.bookData.id}`)
+    }
+  }
+
+
+  const BookCardActions:FC = ()=>{
+      if(props.bookData.state === ""){
+        return (
+          <CardActions sx={{
+            display: "block",
+            textAlign: "center",
+            "&:hover": {
+                backgroundColor: "#0365F2",
+                "& .MuiButton-root": {
+                    color: "#FFFFFF"
+                }
+            }}}>
+            <Button startIcon={<Typography variant="h1" component="span" children={"+"}/>} sx={{
+                textTransform: "none",
+                color: "#0365F2",
+                width: "100%"
+            }} onClick={handleClick}>
+                Add to Library
+            </Button>
+          </CardActions>
+        )
+      }
+      else{
+      return (
+        <Box sx={{padding: "0", margin: "0"}}>
+        {
+        (!props.category) &&
+          <Box sx={{
+            display: "block",
+            textAlign: "center",
+            marginBottom: "16px"
+            }}>
+            {(props.bookData.state === "added to lib")?
+            <Link sx={{
+              textDecoration: "none",
+              cursor: "pointer",
+              fontFamily: "Cera Pro",
+              fontWeight: "500"
+            }} onClick={handleClick}> Finished Reading</Link>:
+            <Link sx={{
+              textDecoration: "none",
+              cursor: "pointer",
+              fontFamily: "Cera Pro",
+              fontWeight: "500"
+              }} onClick={handleClick}> Read Again</Link>}
+          </Box>
+          }
+        </Box>
+      )
     }
   }
 
@@ -124,47 +177,7 @@ const BookCard = (props: Props) => {
           </Box>
         </CardContent>
       </CardActionArea>
-      {(props.bookData.state === "")?
-      <CardActions sx={{
-        display: "block",
-        textAlign: "center",
-        "&:hover": {
-            backgroundColor: "#0365F2",
-            "& .MuiButton-root": {
-                color: "#FFFFFF"
-            }
-        }}}>
-        <Button startIcon={<Typography variant="h1" component="span" children={"+"}/>} sx={{
-            textTransform: "none",
-            color: "#0365F2",
-            width: "100%"
-        }} onClick={handleClick}>
-            Add to Library
-        </Button>
-      </CardActions>
-      : (!props.category) &&
-        <Box sx={{
-          display: "block",
-          textAlign: "center",
-          marginBottom: "16px"
-          }}>
-          {(props.bookData.state === "added to lib")?
-          <Link sx={{
-            textDecoration: "none",
-            cursor: "pointer",
-            fontFamily: "Cera Pro",
-            fontWeight: "500"
-          }} onClick={handleClick}> Finished Reading</Link>:
-          <Link sx={{
-            textDecoration: "none",
-            cursor: "pointer",
-            fontFamily: "Cera Pro",
-            fontWeight: "500"
-            }} onClick={handleClick}> Read Again</Link>}
-        </Box>
-      }
-
-      
+      <BookCardActions />
       {
         props.category && props.bookData.state !== "" &&
       <Box sx={{textAlign: "right", marginRight: "10px", marginBottom: "10px"}}><MoreHorizIcon /></Box>

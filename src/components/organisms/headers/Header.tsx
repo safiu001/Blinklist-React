@@ -5,7 +5,7 @@ import { Theme } from '@mui/material/styles'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import { makeStyles } from '@mui/styles'
-import React, { useState } from 'react'
+import React, { FC, useState } from 'react'
 import Logo from '../../atoms/logo/Logo'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
@@ -85,6 +85,47 @@ const Header = (props: Props) => {
     const navigate = useNavigate()
 
     const {user, isAuthenticated, isLoading, logout, loginWithRedirect} = useAuth0()
+
+
+    const AccountDropDown:FC = ()=>{
+        if(!isLoading && isAuthenticated){
+            return(
+                <Box className={classes.box}>
+                    <AvatarUser children={user?.name?.charAt(0)+""}/>
+                    {accountMenu? <KeyboardArrowUpIcon className={classes.icon} onClick={()=>{setAccountMenu((menu)=>!menu)}}/>
+                    : <KeyboardArrowDownIcon className={classes.icon} onClick={()=>{setAccountMenu((menu)=>!menu)}}/>}
+                </Box>
+            )
+        }
+        else{
+            return(
+
+                <Box className={classes.box}>
+                    <Typography sx={{
+                        marginTop: "2px",
+                        fontWeight: "500",
+                        fontSize: "16px",
+                        lineHeight: '20px',
+                        color: "#03314B"
+                    }}>Account</Typography>
+                    {accountMenu? <KeyboardArrowUpIcon className={classes.icon} onClick={()=>{setAccountMenu((menu)=>!menu)}}/>
+                    : <KeyboardArrowDownIcon data-testid={"arrowDown"} className={classes.icon} onClick={()=>{setAccountMenu((menu)=>!menu)}}/>}
+                </Box>
+            )
+        }
+    }
+
+    const AccountMenu:FC = ()=>{
+        if(!isLoading && isAuthenticated){
+            return(
+                <Link onClick={() => {logout({ returnTo: window.location.origin })}}>Logout</Link>
+            )
+        }else{
+            return(
+                <Link onClick={() => loginWithRedirect()}>Login</Link>
+            )
+        }
+    }
   return (
     <AppBar className={classes.appBar} position={"static"}>
         <Box className={classes.box}>
@@ -101,31 +142,10 @@ const Header = (props: Props) => {
                     </Link>
                 </Box>
                 <Box>
-                    {   (!isLoading && isAuthenticated)?
-                    <Box className={classes.box}>
-                        <AvatarUser children={user?.name?.charAt(0)+""}/>
-                        {accountMenu? <KeyboardArrowUpIcon className={classes.icon} onClick={()=>{setAccountMenu((accountMenu)=>!accountMenu)}}/>
-                        : <KeyboardArrowDownIcon className={classes.icon} onClick={()=>{setAccountMenu((accountMenu)=>!accountMenu)}}/>}
-                    </Box>
-                    :<Box className={classes.box}>
-                        <Typography sx={{
-                            marginTop: "2px",
-                            fontWeight: "500",
-                            fontSize: "16px",
-                            lineHeight: '20px',
-                            color: "#03314B"
-                        }}>Account</Typography>
-                        {accountMenu? <KeyboardArrowUpIcon className={classes.icon} onClick={()=>{setAccountMenu((accountMenu)=>!accountMenu)}}/>
-                        : <KeyboardArrowDownIcon data-testid={"arrowDown"} className={classes.icon} onClick={()=>{setAccountMenu((accountMenu)=>!accountMenu)}}/>}
-                    </Box>
-                    }
-
+                    <AccountDropDown />
                     { accountMenu &&
                     <Box className={classes.accountDropDown}>
-                        { (!isLoading && isAuthenticated)?
-                            <Link onClick={() => {logout({ returnTo: window.location.origin })}}>Logout</Link>
-                            :<Link onClick={() => loginWithRedirect()}>Login</Link>
-                        }
+                        <AccountMenu />
                     </Box>
                     }
                 </Box>

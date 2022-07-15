@@ -1,0 +1,809 @@
+
+_D__Zemoso_Training_React_react_learning_react_blinklist_src_Themes_BookTheme_tsx_4_37_A_103_theZ
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx$ (5"s2_1*Î
+s2_1
+<synthetic> (K
+I
+
+__unknown_file (
+
+%sc-P_32_0"__id**
+
+%env"
+%scope-P_32{y
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx 	(
+	%object_0Object"Objectî
+ë
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx ($
+
+	%object_0Object"
+paddingLeft"__id*
+20%ï
+í
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx (%
+
+	%object_0Object"
+paddingRight"__id*
+15%î
+ë
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx (#
+
+	%object_0Object"
+
+paddingTop"__id*
+60px{y
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx (	
+	%object_1Object"Objectë
+é
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx ( 
+
+	%object_1Object"	
+display"__id*
+flex°
+û
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx (+'
+
+	%object_1Object"
+justifyContent"__id*
+space-betweenñ
+ì
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx ( %
+
+	%object_1Object"
+marginBottom"__id*
+58pxì
+ê
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx ("
+
+	%object_1Object"
+	marginTop"__id*
+40px{y
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx (
+	%object_2Object"Object§
+°
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx (	&
+
+	%object_2Object"
+&.MuiBox-root"__id*
+
+	%object_1Object{y
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx (	
+	%object_3Object"Objectë
+é
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx ( 
+
+	%object_3Object"	
+display"__id*
+flex°
+û
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx (+'
+
+	%object_3Object"
+justifyContent"__id*
+space-betweenñ
+ì
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx ( %
+
+	%object_3Object"
+paddingRight"__id*
+20px{y
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx (
+	%object_4Object"Object§
+°
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx (	&
+
+	%object_4Object"
+&.MuiBox-root"__id*
+
+	%object_3Object{y
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx !(	
+	%object_5Object"Objectê
+ç
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx   (
+
+	%object_5Object"
+width"__id*	
+510px{y
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx "(
+	%object_6Object"Object§
+°
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx !(	&
+
+	%object_6Object"
+&.MuiBox-root"__id*
+
+	%object_5Object{y
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx% *(	
+	%object_7Object"Objectì
+ê
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx& &(#
+
+	%object_7Object"
+
+fontWeight"__id*
+400í
+è
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx' '(!
+
+	%object_7Object"
+
+fontSize"__id*
+16pxî
+ë
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx( ((#
+
+	%object_7Object"
+
+lineHeight"__id*
+20pxí
+è
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx) )(
+
+	%object_7Object"
+color"__id*	
+#03314B{y
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx$ +(
+	%object_8Object"Object´
+®
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx% *(	-
+
+	%object_8Object"
+&.MuiTypography-root"__id*
+
+	%object_7Object{y
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx. 5(	
+	%object_9Object"Objectì
+ê
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx/ /(#
+
+	%object_9Object"
+
+fontWeight"__id*
+700í
+è
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx0 0(!
+
+	%object_9Object"
+
+fontSize"__id*
+36pxî
+ë
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx1 1(#
+
+	%object_9Object"
+
+lineHeight"__id*
+45pxí
+è
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx2 2(
+
+	%object_9Object"
+color"__id*	
+#03314Bñ
+ì
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx4 4( %
+
+	%object_9Object"
+marginBottom"__id*
+24px|z
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx- 6(
+
+%object_10Object"Object¨
+©
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx. 5(	.
+
+
+%object_10Object"
+&.MuiTypography-root"__id*
+
+	%object_9Object|z
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx9 @(	
+
+%object_11Object"Objectî
+ë
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx: :($
+
+
+%object_11Object"
+
+fontWeight"__id*
+400ì
+ê
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx; ;("
+
+
+%object_11Object"
+
+fontSize"__id*
+20pxï
+í
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx< <($
+
+
+%object_11Object"
+
+lineHeight"__id*
+25pxì
+ê
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx= =(
+
+
+%object_11Object"
+color"__id*	
+#03314Bó
+î
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx? ?( &
+
+
+%object_11Object"
+marginBottom"__id*
+24px|z
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx8 A(
+
+%object_12Object"Object≠
+™
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx9 @(	.
+
+
+%object_12Object"
+&.MuiTypography-root"__id*
+
+
+%object_11Object|z
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxD K(	
+
+%object_13Object"Objectî
+ë
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxE E($
+
+
+%object_13Object"
+
+fontWeight"__id*
+400ì
+ê
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxF F("
+
+
+%object_13Object"
+
+fontSize"__id*
+16pxï
+í
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxG G($
+
+
+%object_13Object"
+
+lineHeight"__id*
+20pxì
+ê
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxH H(
+
+
+%object_13Object"
+color"__id*	
+#6D787Eó
+î
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxJ J( &
+
+
+%object_13Object"
+marginBottom"__id*
+19px|z
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxC L(
+
+%object_14Object"Object≠
+™
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxD K(	.
+
+
+%object_14Object"
+&.MuiTypography-root"__id*
+
+
+%object_13Object|z
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxO R(	
+
+%object_15Object"Objectó
+î
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxQ Q( &
+
+
+%object_15Object"
+marginBottom"__id*
+80px|z
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxN S(
+
+%object_16Object"Object¶
+£
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxO R(	'
+
+
+%object_16Object"
+&.MuiBox-root"__id*
+
+
+%object_15Object|z
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxV ](	
+
+%object_17Object"Objectî
+ë
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxW W($
+
+
+%object_17Object"
+
+fontWeight"__id*
+500ì
+ê
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxX X("
+
+
+%object_17Object"
+
+fontSize"__id*
+16pxï
+í
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxY Y($
+
+
+%object_17Object"
+
+lineHeight"__id*
+20pxò
+ï
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxZ Z(!'
+
+
+%object_17Object"
+textTransform"__id*
+noneì
+ê
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx[ [(
+
+
+%object_17Object"
+color"__id*	
+#22C870ó
+î
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx\ \( %
+
+
+%object_17Object"
+borderColor"__id*	
+black|z
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxU ^(
+
+%object_18Object"Object©
+¶
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxV ](	*
+
+
+%object_18Object"
+&.MuiButton-root"__id*
+
+
+%object_17Object|z
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxa e(	
+
+%object_19Object"Objectô
+ñ
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxb b("!
+
+
+%object_19Object"	
+display"__id*
+inline-flexì
+ê
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxc c("
+
+
+%object_19Object"
+
+flexWrap"__id*
+wrapó
+î
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxd d( $
+
+
+%object_19Object"
+
+alignItems"__id*
+
+center|z
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx` f(
+
+%object_20Object"Object¶
+£
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxa e(	'
+
+
+%object_20Object"
+&.MuiBox-root"__id*
+
+
+%object_19Object|z
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxi q(	
+
+%object_21Object"Objectô
+ñ
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxj j("(
+
+
+%object_21Object"
+textDecoration"__id*
+noneî
+ë
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxk k($
+
+
+%object_21Object"
+
+fontWeight"__id*
+400ì
+ê
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxl l("
+
+
+%object_21Object"
+
+fontSize"__id*
+16pxï
+í
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxm m($
+
+
+%object_21Object"
+
+lineHeight"__id*
+20pxì
+ê
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxn n(
+
+
+%object_21Object"
+color"__id*	
+#6D787Eñ
+ì
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxp p(%
+
+
+%object_21Object"
+marginRight"__id*
+11px|z
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxh
+ r(
+
+%object_22Object"Objectß
+§
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxi q(	(
+
+
+%object_22Object"
+&.MuiLink-root"__id*
+
+
+%object_21Object|z
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxw z(	
+
+%object_23Object"Objectë
+é
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxx x( 
+
+
+%object_23Object"
+height"__id*
+16pxê
+ç
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxy y(
+
+
+%object_23Object"
+width"__id*
+17px|z
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxt {(
+
+%object_24Object"Objectì
+ê
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxu u(
+
+
+%object_24Object"
+color"__id*	
+#6D787E™
+ß
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxw z(	+
+
+
+%object_24Object"
+&.MuiSvgIcon-root"__id*
+
+
+%object_23Object}{
+[
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx}
+ Ö(
+
+%object_25Object"Objectì
+ê
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx~ ~(!
+
+
+%object_25Object"	
+display"__id*	
+blockê
+ç
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx ( 
+
+
+%object_25Object"
+height"__id*
+1pxì
+ê
+\
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxÄ Ä(
+
+
+%object_25Object"
+width"__id*	
+912pxü
+ú
+\
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxÅ Å(")
+
+
+%object_25Object"
+backgroundColor"__id*	
+#E1ECFCñ
+ì
+\
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxÉ É(#
+
+
+%object_25Object"
+	marginTop"__id*
+80pxö
+ó
+\
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxÑ Ñ(&
+
+
+%object_25Object"
+marginBottom"__id*	
+177px}{
+[
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx5 Ü(
+
+%object_26Object"Object•
+¢
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx 	('
+
+
+%object_26Object"
+mainContainer"__id*
+
+	%object_0Object™
+ß
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx (,
+
+
+%object_26Object"
+flexCoverContainer"__id*
+
+	%object_2Object™
+ß
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx (,
+
+
+%object_26Object"
+flexLinksContainer"__id*
+
+	%object_4Object©
+¶
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx "(+
+
+
+%object_26Object"
+bodyLeftContainer"__id*
+
+	%object_6Object£
+†
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx$ +(%
+
+
+%object_26Object"
+bookComment"__id*
+
+	%object_8Object¢
+ü
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx- 6(#
+
+
+%object_26Object"
+	bookTitle"__id*
+
+
+%object_10Object§
+°
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx8 A(%
+
+
+%object_26Object"
+bookCaption"__id*
+
+
+%object_12Object£
+†
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxC L($
+
+
+%object_26Object"
+
+bookAuthor"__id*
+
+
+%object_14Object™
+ß
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxN S(+
+
+
+%object_26Object"
+bookTimeContainer"__id*
+
+
+%object_16Object†
+ù
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxU ^(!
+
+
+%object_26Object"	
+readBtn"__id*
+
+
+%object_18Object¶
+£
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx` f('
+
+
+%object_26Object"
+linkContainer"__id*
+
+
+%object_20Objectù
+ö
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxh r(
+
+
+%object_26Object"
+link"__id*
+
+
+%object_22Object¢
+ü
+Z
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsxt {(#
+
+
+%object_26Object"
+	arrowIcon"__id*
+
+
+%object_24Objectû
+õ
+[
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx} Ö(
+
+
+%object_26Object"
+span"__id*
+
+
+%object_25Object"u
+[
+PD:/Zemoso-Training/React/react-learning/react-blinklist/src/Themes/BookTheme.tsx5 Ü(
+
+
+%object_26Object:
+%env:
+themeThemeB 

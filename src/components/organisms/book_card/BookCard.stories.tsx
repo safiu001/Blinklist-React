@@ -17,7 +17,7 @@ const bookData = {
     category: "Featured",
     id: 11
 }
-export const CardBook:ComponentStory<typeof BookCard> = (args)=>{
+export const CardBook:ComponentStory<typeof BookCard> = ()=>{
  return (
     <BrowserRouter>
         <BookCard bookData={bookData} category={false}/>

@@ -6,7 +6,7 @@ import Book from "./Book"
 const MockBookPage = ()=>{
     return (
         <BrowserRouter>
-            <Book />
+            <Book bookData={bookData}/>
         </BrowserRouter>
     )
 }
@@ -37,7 +37,7 @@ describe("Book", ()=>{
         // })
 
         it('should render the book comment', async () => {
-            render(<MockBookPage bookData={bookData}/>)
+            render(<MockBookPage />)
             const textElement = await screen.findByText("Get the key ideas from")
             expect(textElement).toBeInTheDocument()
         })

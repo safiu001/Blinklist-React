@@ -7,10 +7,12 @@ export default{
     component: Header
 } as ComponentMeta<typeof Header>
 
-export const AppBar:ComponentStory<typeof Header> = (args)=>{
+const mock = ()=>{}
+
+export const AppBar:ComponentStory<typeof Header> = ()=>{
     return(
         <BrowserRouter>
-            <Header handleExplore={()=>{}}/>
+            <Header handleExplore={mock}/>
         </BrowserRouter>
     )
 }

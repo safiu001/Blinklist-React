@@ -14,9 +14,13 @@ const bookData={
     id: 1
 }
 
+type Props = {
+    state?: string
+}
+
 const mockGridCLick = jest.fn()
 
-const MockBookCardHome = ({state})=>{
+const MockBookCardHome = ({state}: Props)=>{
     if(state === undefined)
         state = "Finished"
     return (
@@ -29,7 +33,7 @@ const MockBookCardHome = ({state})=>{
     )
 }
 
-const MockBookCardCategory = ({state})=>{
+const MockBookCardCategory = ({state}: Props)=>{
     if(state === undefined)
         state = "Finished"
     return (
@@ -95,8 +99,6 @@ describe("BookCard", ()=>{
         it("should update the API with add Button", async ()=>{
             render(<MockBookCardCategory state={""}/>)
             
-            axios.put.mockResolvedValueOnce("added to library")
-            
             const buttonElement = screen.getByRole("button", {name: /Add to Library/i})
             fireEvent.click(buttonElement)
 
@@ -108,8 +110,6 @@ describe("BookCard", ()=>{
         it("should update the API with finished Button", async ()=>{
             render(<MockBookCardHome state={"added to lib"}/>)
             
-            axios.put.mockResolvedValueOnce("Finished")
-            
             const linkElement = screen.getByText(/Finished Reading/i)
             fireEvent.click(linkElement)
 
@@ -120,8 +120,6 @@ describe("BookCard", ()=>{
 
         it("should update the API with Read Again Button", async ()=>{
             render(<MockBookCardHome state={"Finished"}/>)
-            
-            axios.put.mockResolvedValueOnce("Added to Library")
             
             const linkElement = screen.getByText(/Read Again/i)
             fireEvent.click(linkElement)
