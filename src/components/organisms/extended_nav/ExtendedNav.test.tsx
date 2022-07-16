@@ -1,5 +1,4 @@
 import { fireEvent, render, screen } from "@testing-library/react"
-import axios, { AxiosResponse } from "axios"
 import { BrowserRouter } from "react-router-dom"
 import ExtendedNav from "./ExtendedNav"
 
@@ -11,27 +10,25 @@ const MockExtendedNav = ()=>{
     )
 }
 
-const iconData={
-    data: [
-    {
-        link: "Entrepreneurship",
-        image: "/assets/pictures/icons/Enterpreneurship.png",
-        id: 1
-    },
-    {
-        link: "Science",
-        image: "/assets/pictures/icons/Science.png",
-        id: 2
+jest.mock('axios', () => ({
+    __esModule: true,
+    default: {
+       get: () => ({
+         data:[
+            {
+                link: "Entrepreneurship",
+                image: "/assets/pictures/icons/Enterpreneurship.png",
+                id: 1
+            },
+            {
+                link: "Science",
+                image: "/assets/pictures/icons/Science.png",
+                id: 2
+            }
+         ]
+       })
     }
-]} as AxiosResponse
-
-jest.mock("axios")
-const mockedAxios = axios as jest.Mocked<typeof axios>
-
-const fetch = async ()=>{
-    const response = await axios.get("http://localhost:3000/exploreIcons")
-    return response.data
-}
+}));
 
 
 describe("ExtendedNav", ()=>{
@@ -54,14 +51,6 @@ describe("ExtendedNav", ()=>{
 
 
     describe("ExtendedNavCardDetails", ()=>{
-        // afterEach(() => {
-        //     jest.restoreAllMocks();
-        // });
-
-        beforeEach(()=> {
-            mockedAxios.get.mockResolvedValueOnce(iconData)
-        })
-
         it("should return the grid element", async ()=>{
             render(<MockExtendedNav />)
             const gridTextElement = await screen.findByText(/Entrepreneurship/i)
@@ -79,6 +68,13 @@ describe("ExtendedNav", ()=>{
             const gridTextElement = await screen.findByTestId(1)
             fireEvent.click(gridTextElement)
             expect(document.location.href).toBe("http://localhost/category/Entrepreneurship")
+        })
+
+        it("should handle click for all nav items", async ()=>{
+            render(<MockExtendedNav />)
+            const gridTextElement = await screen.findByTestId(2)
+            fireEvent.click(gridTextElement)
+            expect(gridTextElement).toBeInTheDocument()
         })
     })
 })

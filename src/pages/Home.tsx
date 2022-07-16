@@ -10,7 +10,7 @@ import { CardModel } from '../model/CardModel'
 
 type Props = {}
 
-const useStyles = makeStyles((theme: Theme)=>({
+const useStyles = makeStyles((_theme: Theme)=>({
   heading: {
     paddingLeft: "19%",
     "&.MuiTypography-root": {
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme)=>({
   }
 }))
 
-const Body:FC = (props: Props) => {
+const Body:FC = (_props: Props) => {
   const [data, setData] = useState<CardModel[]>([])
 
   useEffect(()=>{
@@ -45,7 +45,7 @@ const Body:FC = (props: Props) => {
   )
 }
 
-const Home = (props: Props) => {
+const Home = (_props: Props) => {
   return <Template children={<Body />}/>
 }
 

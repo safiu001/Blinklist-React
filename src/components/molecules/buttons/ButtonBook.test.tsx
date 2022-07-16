@@ -48,8 +48,8 @@ describe("ButtonBook", ()=>{
             </BrowserRouter>
         )
 
-        const buttonElement = screen.getByRole("button")
+        const buttonElement = await screen.findByRole("button")
         fireEvent.click(buttonElement)
-        expect(axios.put).not.toHaveBeenCalled()
+        expect(axios.put).toHaveBeenCalled()
     })
 })
