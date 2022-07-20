@@ -1,85 +1,209 @@
-import AppBar from '@mui/material/AppBar'
-import Box from '@mui/material/Box'
-import Link from '@mui/material/Link'
-import { Theme } from '@mui/material/styles'
-import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
-import { makeStyles } from '@mui/styles'
-import React, { useState } from 'react'
-import Logo from '../../atoms/logo/Logo'
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import AvatarUser from '../../atoms/avatars/AvatarUser'
-import SearchIcon from '@mui/icons-material/Search'
-import { useNavigate } from 'react-router-dom'
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Link from "@mui/material/Link";
+import { Theme } from "@mui/material/styles";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import { makeStyles } from "@mui/styles";
+import React, { FC, useState } from "react";
+import Logo from "../../atoms/logo/Logo";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import AvatarUser from "../../atoms/avatars/AvatarUser";
+import SearchIcon from "@mui/icons-material/Search";
+import { useNavigate } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 type Props = {
-    handleExplore: ()=>void
-}
+  handleExplore: () => void;
+};
 
-const useStyles = makeStyles((theme:Theme)=>({
-    box: {
-        "&.MuiBox-root": {
-            display: "flex",
-            height: "100%"
+const useStyles = makeStyles((_theme: Theme) => ({
+  box: {
+    "&.MuiBox-root": {
+      display: "flex",
+      height: "100%",
+    },
+  },
+  left: {
+    justifyContent: "space-between",
+    width: "422px",
+    "& .MuiTypography-root": {
+      color: "#03314B",
+      alignSelf: "center",
+      textDecoration: "none",
+      cursor: "pointer",
+    },
+  },
+  icon: {
+    color: "#042330",
+    alignSelf: "center",
+    "&:hover": {
+      cursor: "pointer",
+    },
+  },
+  appBar: {
+    "&.MuiAppBar-root": {
+      height: "86px",
+      backgroundColor: "#FFFFFF",
+      padding: "0 17%",
+      boxShadow: "none",
+    },
+  },
+  accountDropDown: {
+    "&.MuiBox-root": {
+      fontFamily: "Cera Pro",
+      position: "absolute",
+      padding: "8px 0",
+      backgroundColor: "#F1F6F4",
+
+      "& .MuiLink-root": {
+        cursor: "pointer",
+        padding: "10px 22px",
+        textDecoration: "none",
+        fontWeight: "500",
+        fontSize: "18px",
+        lineHeight: "24px",
+        color: "#6D787E",
+        "&:hover": {
+          color: "#116BE9",
         },
+      },
     },
-    left: {
-        justifyContent: "space-between",
-        width: "422px",
-        "& .MuiTypography-root": {
-            color: "#03314B",
-            alignSelf: "center",
-            textDecoration: "none",
-            cursor: "pointer"
-        }
-    },
-    icon: {
-        color: "#042330",
-        alignSelf: "center"
-    },
-    appBar: {
-        "&.MuiAppBar-root": {
-            height: "86px",
-            backgroundColor: "#FFFFFF",
-            padding: "0 17%",
-            boxShadow: "none"
-        }
-    }
-}))
+  },
+}));
 
 const Header = (props: Props) => {
-    const [explore, setExplore] = useState<boolean>(false)
-    const classes = useStyles(explore)
+  const [explore, setExplore] = useState<boolean>(false);
+  const [accountMenu, setAccountMenu] = useState<boolean>(false);
+  const classes = useStyles(explore);
 
-    const handleExploreClick = ()=>{
-        setExplore((explore)=>!explore)
-        props.handleExplore()
-    }
-    const navigate = useNavigate()
-  return (
-    <AppBar className={classes.appBar} position={"static"}>
+  const handleExploreClick = () => {
+    setExplore((prevExplore) => !prevExplore);
+    props.handleExplore();
+  };
+  const navigate = useNavigate();
+
+  const { user, isAuthenticated, isLoading, logout, loginWithRedirect } =
+    useAuth0();
+
+  const AccountDropDown: FC = () => {
+    if (!isLoading && isAuthenticated) {
+      return (
         <Box className={classes.box}>
-            <Toolbar sx={{display: "flex", justifyContent: "space-between", width:"100%"}}>
-                <Box className={`${classes.left} ${classes.box}`}>
-                    <Logo link={'/assets/pictures/Blinklist.png'}/>
-                    <SearchIcon className={classes.icon}/>
-                    <Link sx={{display: "flex", borderBottom: explore?"1px solid #2CE080":"none"}} onClick={handleExploreClick}>
-                        <Typography>Explore</Typography>
-                        {explore? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-                    </Link>
-                    <Link onClick={()=>{navigate("/")}}>
-                        <Typography>My Library</Typography>
-                    </Link>
-                </Box>
-                <Box className={classes.box}>
-                    <AvatarUser children={"A"}></AvatarUser>
-                    <KeyboardArrowDownIcon className={classes.icon}/>
-                </Box>
-            </Toolbar>
+          <AvatarUser children={user?.name?.charAt(0) + ""} />
+          {accountMenu ? (
+            <KeyboardArrowUpIcon
+              className={classes.icon}
+              onClick={() => {
+                setAccountMenu((menu) => !menu);
+              }}
+            />
+          ) : (
+            <KeyboardArrowDownIcon
+              className={classes.icon}
+              onClick={() => {
+                setAccountMenu((menu) => !menu);
+              }}
+            />
+          )}
         </Box>
-    </AppBar>
-  )
-}
+      );
+    } else {
+      return (
+        <Box className={classes.box}>
+          <Typography
+            sx={{
+              marginTop: "2px",
+              fontWeight: "500",
+              fontSize: "16px",
+              lineHeight: "20px",
+              color: "#03314B",
+            }}
+          >
+            Account
+          </Typography>
+          {accountMenu ? (
+            <KeyboardArrowUpIcon
+              className={classes.icon}
+              onClick={() => {
+                setAccountMenu((menu) => !menu);
+              }}
+            />
+          ) : (
+            <KeyboardArrowDownIcon
+              data-testid={"arrowDown"}
+              className={classes.icon}
+              onClick={() => {
+                setAccountMenu((menu) => !menu);
+              }}
+            />
+          )}
+        </Box>
+      );
+    }
+  };
 
-export default Header
+  const AccountMenu: FC = () => {
+    if (!isLoading && isAuthenticated) {
+      return (
+        <Link
+          onClick={() => {
+            logout({ returnTo: window.location.origin });
+          }}
+        >
+          Logout
+        </Link>
+      );
+    } else {
+      return <Link onClick={() => loginWithRedirect()}>Login</Link>;
+    }
+  };
+  return (
+    <AppBar className={classes.appBar} position={"sticky"}>
+      <Box className={classes.box}>
+        <Toolbar
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            width: "100%",
+          }}
+        >
+          <Box className={`${classes.left} ${classes.box}`}>
+            <Logo link={"/assets/pictures/Blinklist.png"} />
+            <SearchIcon className={classes.icon} />
+            <Link
+              sx={{
+                display: "flex",
+                borderBottom: explore ? "1px solid #2CE080" : "none",
+              }}
+              onClick={handleExploreClick}
+              data-testid={"explore"}
+            >
+              <Typography>Explore</Typography>
+              {explore ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+            </Link>
+            <Link
+              onClick={() => {
+                navigate("/");
+              }}
+              data-testid={"myLibrary"}
+            >
+              <Typography>My Library</Typography>
+            </Link>
+          </Box>
+          <Box>
+            <AccountDropDown />
+            {accountMenu && (
+              <Box className={classes.accountDropDown}>
+                <AccountMenu />
+              </Box>
+            )}
+          </Box>
+        </Toolbar>
+      </Box>
+    </AppBar>
+  );
+};
+
+export default Header;

@@ -1,45 +1,46 @@
-import Box from '@mui/material/Box'
-import { Theme } from '@mui/material/styles'
-import { makeStyles } from '@mui/styles'
-import React, { useState } from 'react'
-import ExtendedNav from '../organisms/extended_nav/ExtendedNav'
-import Footer from '../organisms/footer/Footer'
-import Header from '../organisms/headers/Header'
+import Box from "@mui/material/Box";
+import { Theme } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
+import React, { useState } from "react";
+import ExtendedNav from "../organisms/extended_nav/ExtendedNav";
+import Footer from "../organisms/footer/Footer";
+import Header from "../organisms/headers/Header";
 
 type Props = {
-  children: JSX.Element,
-  height?: string
-}
+  children: JSX.Element;
+  height?: string;
+};
 
-const useStyles = makeStyles((theme: Theme)=>({
+const useStyles = makeStyles((_theme: Theme) => ({
   modal: {
-    position: "absolute",
+    position: "fixed",
     backgroundColor: "rgba(157, 163, 166, 0.45)",
+    top: "86px",
     width: "100%",
-    zIndex: "1"
-  }
-}))
+    zIndex: "1",
+  },
+}));
 
 const Template = (props: Props) => {
-  const [explore, setExplore] = useState<boolean>(false)
-  const classes = useStyles()
+  const [explore, setExplore] = useState<boolean>(false);
+  const classes = useStyles();
 
-  const handleExplore = ()=>{
-    setExplore((explore)=>!explore)
-  }
+  const handleExplore = () => {
+    setExplore((prevExplore) => !prevExplore);
+  };
 
   return (
     <div>
-      <Header handleExplore={handleExplore}/>
-      {explore && 
-      <Box className={classes.modal} sx={{height: "100%"}}>
-        <ExtendedNav />
-      </Box>
-      }
+      <Header handleExplore={handleExplore} />
+      {explore && (
+        <Box className={classes.modal} sx={{ height: "100%" }}>
+          <ExtendedNav />
+        </Box>
+      )}
       {props.children}
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Template
+export default Template;

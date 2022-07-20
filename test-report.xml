@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\pages\Book.test.tsx">
+    <testCase name="Book BookTexts should render the book comment" duration="333"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\components\organisms\extended_nav\ExtendedNav.test.tsx">
+    <testCase name="ExtendedNav ExtendedNav Navigation Tab should return the nav item" duration="289"/>
+    <testCase name="ExtendedNav ExtendedNav Navigation Tab should change the tab when clicked" duration="117"/>
+    <testCase name="ExtendedNav ExtendedNavCardDetails should return the grid element" duration="65"/>
+    <testCase name="ExtendedNav ExtendedNavCardDetails should return the icon Image" duration="50"/>
+    <testCase name="ExtendedNav ExtendedNavCardDetails should handle click in the nav" duration="64"/>
+    <testCase name="ExtendedNav ExtendedNavCardDetails should handle click for all nav items" duration="52"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\components\organisms\book_card\BookCard.test.tsx">
+    <testCase name="BookCard BookCardTestWithNullValues should not fire call the method" duration="120"/>
+    <testCase name="BookCard BookCardTexts should render the title" duration="36"/>
+    <testCase name="BookCard BookCardTexts should render the author" duration="27"/>
+    <testCase name="BookCard BookCardTexts should render the time required to read" duration="30"/>
+    <testCase name="BookCard BookCardTexts should render the reads" duration="23"/>
+    <testCase name="BookCard BookCardButtonLinks should render the add button" duration="284"/>
+    <testCase name="BookCard BookCardButtonLinks should render the finish Link" duration="32"/>
+    <testCase name="BookCard BookCardButtonLinks should render the Read again Link" duration="25"/>
+    <testCase name="BookCard BookCardButtonLinks should not render the add to library if already added" duration="123"/>
+    <testCase name="BookCard BookCardHandleClick should update the API with add Button" duration="148"/>
+    <testCase name="BookCard BookCardHandleClick should update the API with finished Button" duration="24"/>
+    <testCase name="BookCard BookCardHandleClick should update the API with Read Again Button" duration="21"/>
+    <testCase name="BookCard BookCardHandleClick should navigate to the Book Screen when clicked on card" duration="139"/>
+    <testCase name="BookCard BookCardHandleClick should not navigate to the Book Screen when clicked on card at Home" duration="131"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\pages\Home.test.tsx">
+    <testCase name="Home should render the My library Heading" duration="261"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\components\molecules\tabs\TabsBlinkList.test.tsx">
+    <testCase name="TabsBlinkList should render the Tabs" duration="192"/>
+    <testCase name="TabsBlinkList should render the Tab panel one" duration="83"/>
+    <testCase name="TabsBlinkList should render the Tab panel two" duration="219"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\pages\Category.test.tsx">
+    <testCase name="Category Category with SubCategory should render the Trending Blinks Text" duration="312"/>
+    <testCase name="Category Category with SubCategory should render the Featured Blinks" duration="97"/>
+    <testCase name="Category Category with SubCategory should render the Just added Blinks" duration="102"/>
+    <testCase name="Category Category Search integration should able to filter the results based on the search" duration="358"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\components\molecules\searchbar\Search.test.tsx">
+    <testCase name="SearchBar should render the Search Input" duration="118"/>
+    <testCase name="SearchBar should able to enter the text" duration="31"/>
+    <testCase name="SearchBar should not fire an event if props is not passed" duration="25"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\components\organisms\cards_grid\CardGrid.test.tsx">
+    <testCase name="CardGrid should render the Grid Items" duration="125"/>
+    <testCase name="CardGrid should change the state when props is changed" duration="38"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\components\molecules\tabs\TabsBook.test.tsx">
+    <testCase name="TabsBook should render all the tabs" duration="141"/>
+    <testCase name="TabsBook should render the First panels text" duration="67"/>
+    <testCase name="TabsBook should render the Second Panel Text" duration="56"/>
+    <testCase name="TabsBook should render the Third Panel Text" duration="47"/>
+    <testCase name="TabsBook should able to change the value of the tabs" duration="155"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\components\molecules\buttons\ButtonBook.test.tsx">
+    <testCase name="ButtonBook should render the Button with the text" duration="46"/>
+    <testCase name="ButtonBook should handle the Click" duration="242"/>
+    <testCase name="ButtonBook should not fire an event if props not passed" duration="29"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\components\organisms\headers\Header.test.tsx">
+    <testCase name="Header should render Explore Text" duration="81"/>
+    <testCase name="Header should able to Click Explore" duration="66"/>
+    <testCase name="Header should redner the Mylibrary Text" duration="26"/>
+    <testCase name="Header should redner the Mylibrary Button" duration="29"/>
+    <testCase name="Header should render the DropDown Arrow of Accounts" duration="22"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\components\templates\template.test.tsx">
+    <testCase name="Template should render the children as passed in the props" duration="108"/>
+    <testCase name="Template should change the state when clicked on the drop down" duration="193"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\components\organisms\footer\Footer.test.tsx">
+    <testCase name="Footer should" duration="49"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\components\molecules\banner\Banner.test.tsx">
+    <testCase name="Banner should render the Banner Image with the Link" duration="13"/>
+    <testCase name="Banner should render the heading of the banner as required" duration="13"/>
+    <testCase name="Banner should render the text of the banner as required" duration="11"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\components\molecules\FooterMap\FooterNav.test.tsx">
+    <testCase name="FooterNav should render Editorial Grid Element" duration="34"/>
+    <testCase name="FooterNav should render Useful links Grid Element" duration="25"/>
+    <testCase name="FooterNav should render Company Grid Element" duration="20"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\components\atoms\avatars\__test__\Avatar.test.tsx">
+    <testCase name="AvatarUser should Render the Avatar with the given text" duration="14"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\components\molecules\FooterMap\FooterLeftContent.test.tsx">
+    <testCase name="FooterLeftContent should render the text of Footer" duration="13"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\components\atoms\icons\IconImage.test.tsx">
+    <testCase name="IconImage should return the Icon of the Image link" duration="4"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\components\atoms\logo\Logo.test.tsx">
+    <testCase name="Logo should render the Logo with the link" duration="9"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\components\atoms\cover_image\Cover.test.tsx">
+    <testCase name="BookCover should render the image passed to the link" duration="4"/>
+  </file>
+  <file path="D:\Zemoso-Training\React\react-learning\react-blinklist\src\components\atoms\FooterMap\FooterInfo.test.tsx">
+    <testCase name="FooterInfo should return the footer text" duration="4"/>
+  </file>
+</testExecutions>

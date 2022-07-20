@@ -1,4 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { BrowserRouter } from "react-router-dom";
 import Header from "./Header";
 
 export default{
@@ -6,4 +7,12 @@ export default{
     component: Header
 } as ComponentMeta<typeof Header>
 
-export const AppBar:ComponentStory<typeof Header> = (args)=><Header handleExplore={()=>{}}/>
+const mock = ()=>{}
+
+export const AppBar:ComponentStory<typeof Header> = ()=>{
+    return(
+        <BrowserRouter>
+            <Header handleExplore={mock}/>
+        </BrowserRouter>
+    )
+}

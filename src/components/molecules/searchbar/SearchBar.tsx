@@ -2,7 +2,6 @@ import { InputAdornment } from '@mui/material'
 import FormControl from '@mui/material/FormControl'
 import Input from '@mui/material/Input'
 import SearchIcon from '@mui/icons-material/Search';
-import InputLabel from '@mui/material/InputLabel'
 import React from 'react'
 
 type Props = {
